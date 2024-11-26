@@ -4,7 +4,7 @@ import React from 'react'
 export default function page() {
   return (
     <div>
-      <Precio_MayorProducto/>
+      <Precio_MayorProducto></Precio_MayorProducto>
     </div>
   )
 }

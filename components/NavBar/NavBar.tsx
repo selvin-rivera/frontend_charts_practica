@@ -9,7 +9,7 @@ export default function NavBar() {
      
         <ul className="nav">
             <li className="nav-item">
-                <Link className="nav-link active" href="/max">Maximo Salario (Max)</Link>
+                <Link className="nav-link active" href="/max">Precio Mayor (Max)</Link>
             </li>
             <li className="nav-item">
                 <Link   className="nav-link active" href="/count">                      
@@ -19,7 +19,7 @@ export default function NavBar() {
             </li>
             <li className="nav-item">
                 <Link  className="nav-link active" href="/suma">
-                        Diferencia Salario (SUM)
+                        Valor Alto (SUM)
                 </Link>
           
             </li>

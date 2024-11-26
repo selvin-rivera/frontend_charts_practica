@@ -7,7 +7,7 @@ export const getProductoMaximo = async ()=>{
 
 }
 
-export const getCountDepartamento = async ()=>{
+export const getPrecio_MayorProducto = async ()=>{
 
     const response = await axios.get('http://localhost:5000/valor-productos-alto');
     return response.data
