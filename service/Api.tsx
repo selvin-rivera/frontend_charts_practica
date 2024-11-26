@@ -14,16 +14,9 @@ export const getPrecio_MayorProducto = async ()=>{
 
 }
 
-export const getDeptos = async ()=>{
+export const getPromedio_TipoMoneda = async ()=>{
 
-    const response = await axios.get(`http://localhost:5000/departamentos`);
-    return response.data
-
-}
-
-export const getSalarioMaximo = async (departmentId:number)=>{
-
-    const response = await axios.get(`http://localhost:5000/maximo-salario-departamento/${departmentId}`);
+    const response = await axios.get(`http://localhost:5000/promedio-tipoMoneda`);
     return response.data
 
 }

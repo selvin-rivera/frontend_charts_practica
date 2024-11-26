@@ -12,8 +12,8 @@ export default function NavBar() {
                 <Link className="nav-link active" href="/max">Precio Mayor (Max)</Link>
             </li>
             <li className="nav-item">
-                <Link   className="nav-link active" href="/count">                      
-                Despidos (Count)
+                <Link   className="nav-link active" href="/avg">                      
+                Promedio (AVG)
                 </Link>
           
             </li>

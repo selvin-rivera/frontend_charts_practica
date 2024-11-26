@@ -1,6 +1,6 @@
 'use client'
 
-import { getPrecio_MayorProducto } from '@/service/Api';
+import { getPromedio_TipoMoneda } from '@/service/Api';
 import React, { useEffect, useState } from 'react'
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
@@ -8,7 +8,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 //creando funcion 
-export default function Precio_MayorProducto() {
+export default function getPromedio_Moneda() {
 
   const [chartData, setChartData] = useState({
     labels:[],
@@ -22,14 +22,14 @@ export default function Precio_MayorProducto() {
   })
 
   useEffect(()=>{
-    getPrecio_MayorProducto().then(data=>{
-        const  tipoProducto = data.map((item:any) => item.plannerCode);
-        const productos= data.map((item:any) => item.valor_alto);
+    getPromedio_TipoMoneda().then(data=>{
+        const  tipoProducto = data.map((item:any) => item.valueCurrency);
+        const productos= data.map((item:any) => item.Promedio_tipo_Moneda);
         
         setChartData({
             labels:tipoProducto,
             datasets:[{
-                label: 'Precio mas alto de producto',
+                label: 'Promedio tipo de moneda',
                 data:productos,
                 backgroundColor:'rgb(255, 99, 132)'
             }
